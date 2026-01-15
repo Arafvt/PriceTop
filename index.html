@@ -610,74 +610,105 @@
     </section>
 
     <!-- Feedback -->
-    <section class="section testimonials" id="testimonials">
+    <section class="section testimonials" id="reviews">
       <div class="container">
         <div class="section__head">
-          <h2 class="h2">Отзывы</h2>
+          <h2 class="h2">Отзывы наших клиентов</h2>
+          <p class="sub">Клиенты увеличивают свою прибыль в несколько раз уже в первый месяц.</p>
         </div>
 
-        <div class="testimonials__grid">
-          <article class="quote" data-tilt>
-            <div class="quote__top">
-              <div class="quote__mark">“</div>
-              <div class="quote__meta">
-                <div class="quote__name">Магазин электроники</div>
-                <div class="quote__tag">Kaspi</div>
-              </div>
-            </div>
-            <p class="quote__text">
-              “Раньше цены меняли вручную вечером. Сейчас просто задали границы — и стали чаще появляться первыми.”
-            </p>
-            <div class="quote__bottom">
-              <span class="quote__pill">меньше рутины</span>
-              <span class="quote__pill">больше заказов</span>
-            </div>
-          </article>
+        <div class="tSlider">
+          <button class="tSlider__nav tSlider__nav--prev" type="button" aria-label="Предыдущий отзыв">
+            ←
+          </button>
 
-          <article class="quote quote--accent" data-tilt>
-            <div class="quote__top">
-              <div class="quote__mark">“</div>
-              <div class="quote__meta">
-                <div class="quote__name">Товары для дома</div>
-                <div class="quote__tag">Kaspi</div>
+          <div class="tSlider__viewport" data-slider>
+            <!-- CARD 1 -->
+            <article class="tCard" data-card>
+              <div class="tCard__media" aria-hidden="true">
+                <div class="tAvatar">
+                  <span class="tAvatar__glyph">👤</span>
+                </div>
               </div>
-            </div>
-            <p class="quote__text">
-              “Главное — не уходим ниже минимума. Это даёт спокойствие, а место в списке реально держится дольше.”
-            </p>
-            <div class="quote__bottom">
-              <span class="quote__pill">контроль</span>
-              <span class="quote__pill">вверху списка</span>
-            </div>
-          </article>
 
-          <article class="quote" data-tilt>
-            <div class="quote__top">
-              <div class="quote__mark">“</div>
-              <div class="quote__meta">
-                <div class="quote__name">Магазин аксессуаров</div>
-                <div class="quote__tag">Kaspi</div>
+              <div class="tCard__content">
+                <div class="tStars" aria-label="5 из 5">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+
+                <p class="tText">
+                  Раньше сам следил за ценами, теперь всё делает PriceTop. Стал свободнее во времени и больше уделять
+                  внимания себе.
+                </p>
+
+                <div class="tFooter">
+                  <div class="tName">Нурбол</div>
+                  <a class="tSocial" href="#" aria-label="Instagram">
+                    <span class="tSocial__ig">◎</span>
+                    <span class="tSocial__txt">Instagram</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <p class="quote__text">
-              “Подключили на часть товаров — стало проще. Сервис работает сам, а мы смотрим результат по продажам.”
-            </p>
-            <div class="quote__bottom">
-              <span class="quote__pill">быстрый старт</span>
-              <span class="quote__pill">понятно</span>
-            </div>
-          </article>
-        </div>
+            </article>
 
-        <div class="testimonials__strip" data-tilt>
-          <div class="strip__left">
-            <div class="strip__title">Хотите так же?</div>
-            <div class="strip__sub">Покажем на ваших товарах, как будет выглядеть “до/после”.</div>
+            <!-- CARD 2 -->
+            <article class="tCard" data-card>
+              <div class="tCard__media" aria-hidden="true">
+                <div class="tAvatar">
+                  <span class="tAvatar__glyph">👤</span>
+                </div>
+              </div>
+              <div class="tCard__content">
+                <div class="tStars" aria-label="5 из 5">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="tText">
+                  Поднялись в выдаче за счёт точных цен. Теперь реагируем быстрее конкурентов, продажи
+                  стабильнее.
+                </p>
+                <div class="tFooter">
+                  <div class="tName">Айгерим</div>
+                  <a class="tSocial" href="#" aria-label="Instagram">
+                    <span class="tSocial__ig">◎</span>
+                    <span class="tSocial__txt">Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="tCard" data-card>
+              <div class="tCard__media" aria-hidden="true">
+                <div class="tAvatar">
+                  <span class="tAvatar__glyph">👤</span>
+                </div>
+              </div>
+              <div class="tCard__content">
+                <div class="tStars" aria-label="5 из 5">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="tText">
+                  Наконец перестали «терять» маржу ночью. PriceTop работают и в выходные — очень
+                  удобно.
+                </p>
+                <div class="tFooter">
+                  <div class="tName">Руслан</div>
+                  <a class="tSocial" href="#" aria-label="Instagram">
+                    <span class="tSocial__ig">◎</span>
+                    <span class="tSocial__txt">Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-          <a class="btn btn--primary btn--lg" href="#cta">Попробовать бесплатно</a>
+
+          <button class="tSlider__nav tSlider__nav--next" type="button" aria-label="Следующий отзыв">
+            →
+          </button>
         </div>
       </div>
     </section>
+
 
     <!-- FAQ -->
     <section class="section" id="faq">
@@ -741,82 +772,15 @@
         </div>
 
         <div class="footer__right">
-          <a class="footer__link" href="#problem">Проблема</a>
-          <a class="footer__link" href="#how">Как работает</a>
-          <a class="footer__link" href="#cta">Попробовать</a>
+          <a class="footer__link">Проблема</a>
+          <a class="footer__link">Пользовательское соглашение</a>
+          <a class="footer__link">Услуги</a>
         </div>
       </div>
     </footer>
   </main>
 
-  <script>
-    document.querySelector("[data-year]").textContent = new Date().getFullYear();
-
-    const burger = document.querySelector("[data-burger]");
-    const mobile = document.querySelector("[data-mobile]");
-    const toggleMobile = () => {
-      const open = mobile.classList.toggle("mobile--open");
-      burger.classList.toggle("burger--open", open);
-      document.body.classList.toggle("no-scroll", open);
-    };
-    burger?.addEventListener("click", toggleMobile);
-    mobile?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => {
-      if (mobile.classList.contains("mobile--open")) toggleMobile();
-    }));
-
-    const reveal = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("reveal--in");
-        });
-      },
-      { threshold: 0.12 }
-    );
-    document.querySelectorAll("[data-tilt], .section__head, .facts, .cta").forEach((el) => {
-      el.classList.add("reveal");
-      reveal.observe(el);
-    });
-
-    const canHover = matchMedia("(hover:hover) and (pointer:fine)").matches;
-    if (canHover) {
-      document.querySelectorAll("[data-tilt]").forEach((card) => {
-        let raf = null;
-        const reset = () => {
-          card.style.transform = "";
-          card.style.setProperty("--mx", "0px");
-          card.style.setProperty("--my", "0px");
-        };
-
-        const onMove = (ev) => {
-          const r = card.getBoundingClientRect();
-          const px = (ev.clientX - r.left) / r.width;
-          const py = (ev.clientY - r.top) / r.height;
-          const rx = (py - 0.5) * -8;
-          const ry = (px - 0.5) * 10;
-          const mx = (px - 0.5) * 18;
-          const my = (py - 0.5) * 18;
-
-          if (raf) cancelAnimationFrame(raf);
-          raf = requestAnimationFrame(() => {
-            card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translate3d(${mx}px, ${my}px, 0)`;
-            card.style.setProperty("--mx", `${mx}px`);
-            card.style.setProperty("--my", `${my}px`);
-          });
-        };
-
-        card.addEventListener("mousemove", onMove);
-        card.addEventListener("mouseleave", reset);
-      });
-    }
-
-    const par = document.querySelector("[data-parallax]");
-    if (canHover && par) {
-      window.addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 16;
-        const y = (e.clientY / window.innerHeight - 0.5) * 12;
-        par.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-      });
-    }
+  <script src="./index.js">
   </script>
 </body>
 
