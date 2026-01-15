@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PriceTop</title>
+  <meta name="description" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Background effects -->
+  <div class="bg">
+    <div class="bg__noise"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__glow bg__glow--c"></div>
+    <div class="bg__grid"></div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">PT</span>
+        <span class="brand__name">PriceTop</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a class="nav__link" href="#problem">Проблема</a>
+        <a class="nav__link" href="#solution">Решение</a>
+        <a class="nav__link" href="#how">Как работает</a>
+        <a class="nav__link" href="#features">Возможности</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="#how">Показать, как работает</a>
+        <a class="btn btn--primary" href="#cta">Попробовать бесплатно</a>
+      </div>
+
+      <button class="burger" aria-label="Открыть меню" data-burger>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile" data-mobile>
+      <div class="container mobile__inner">
+        <a class="mobile__link" href="#problem">Проблема</a>
+        <a class="mobile__link" href="#solution">Решение</a>
+        <a class="mobile__link" href="#how">Как работает</a>
+        <a class="mobile__link" href="#features">Возможности</a>
+        <a class="mobile__link" href="#faq">FAQ</a>
+        <div class="mobile__actions">
+          <a class="btn btn--primary" href="#cta">Попробовать бесплатно</a>
+          <a class="btn" href="#how">Показать, как работает</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Animation -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="pill">
+            <span class="pill__dot" aria-hidden="true"></span>
+            Проверяем цены регулярно — примерно раз в 3 минуты
+          </div>
+
+          <h1 class="h1">
+            Будьте первыми в списке продавцов на Kaspi —
+            <span class="h1__accent">чаще и дольше</span>
+          </h1>
+
+          <p class="lead">
+            Сервис следит за ценами конкурентов и аккуратно двигает вашу цену,
+            чтобы вы поднимались выше. Вы заранее задаёте границы — ниже них не опускаемся.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#cta">
+              Попробовать бесплатно
+              <span class="btn__spark" aria-hidden="true"></span>
+            </a>
+            <a class="btn btn--lg" href="#how">Показать, как работает</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta">
+              <div class="meta__k">Проверка цен</div>
+              <div class="meta__v">~3 мин</div>
+            </div>
+            <div class="meta">
+              <div class="meta__k">Контроль цены</div>
+              <div class="meta__v">в границах</div>
+            </div>
+            <div class="meta">
+              <div class="meta__k">Работа</div>
+              <div class="meta__v">24/7</div>
+            </div>
+          </div>
+
+          <div class="hint">
+            Без сложных слов. Понятный результат: быть выше, не выходя за ваши границы.
+          </div>
+        </div>
+
+        <!-- Visual collage -->
+        <div class="hero__right" aria-label="Визуальные карточки">
+          <div class="collage" data-parallax>
+            <article class="shot shot--big shot--a" data-tilt>
+              <div class="shot__bar">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <div class="shot__title">Карточка товара</div>
+              <div class="shot__sub">Список продавцов</div>
+
+              <div class="rank">
+                <div class="rank__row rank__row--me">
+                  <span class="rank__pos">1</span>
+                  <span class="rank__name">Вы</span>
+                  <span class="rank__price">49 990 ₸</span>
+                  <span class="rank__tag">вверху</span>
+                </div>
+                <div class="rank__row">
+                  <span class="rank__pos">2</span>
+                  <span class="rank__name">Конкурент A</span>
+                  <span class="rank__price">50 490 ₸</span>
+                </div>
+                <div class="rank__row">
+                  <span class="rank__pos">3</span>
+                  <span class="rank__name">Конкурент B</span>
+                  <span class="rank__price">50 990 ₸</span>
+                </div>
+              </div>
+
+              <div class="shot__footer">
+                <span class="chip chip--ok">Цена в границах</span>
+                <span class="chip">Обновление: 2 мин назад</span>
+              </div>
+            </article>
+
+            <article class="shot shot--big shot--b" data-tilt>
+              <div class="shot__bar">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <div class="shot__title">Правило цены</div>
+              <div class="shot__sub">Ниже минимума — нельзя</div>
+
+              <div class="range">
+                <div class="range__labels">
+                  <span>Минимум</span><span>Текущая</span><span>Максимум</span>
+                </div>
+                <div class="range__track">
+                  <div class="range__fill"></div>
+                  <div class="range__pin range__pin--min" title="Минимум"></div>
+                  <div class="range__pin range__pin--now" title="Текущая"></div>
+                  <div class="range__pin range__pin--max" title="Максимум"></div>
+                </div>
+                <div class="range__values">
+                  <b>48 990 ₸</b><b>49 990 ₸</b><b>54 990 ₸</b>
+                </div>
+              </div>
+
+              <div class="shot__footer">
+                <span class="chip chip--warn">Шаг: небольшой</span>
+                <span class="chip">Работает 24/7</span>
+              </div>
+            </article>
+
+            <article class="tile tile--c" data-tilt>
+              <div class="tile__k">Чаще в топе</div>
+              <div class="tile__v">больше времени наверху</div>
+              <div class="sparkline" aria-hidden="true"></div>
+            </article>
+
+            <article class="tile tile--d" data-tilt>
+              <div class="tile__k">Без ручной возни</div>
+              <div class="tile__v">цены двигаются сами</div>
+              <div class="dots" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </article>
+
+            <article class="tile tile--e" data-tilt>
+              <div class="tile__k">Контроль</div>
+              <div class="tile__v">минимум / максимум</div>
+              <div class="badge2" aria-hidden="true">Границы</div>
+            </article>
+
+            <div class="float float--1">Обновление</div>
+            <div class="float float--2">Список продавцов</div>
+            <div class="float float--3">Шаг цены</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Почему продажи упираются в цену и время</h2>
+          <p class="sub">
+            Список продавцов меняется постоянно. Если не следить — вы проваливаетесь вниз.
+          </p>
+        </div>
+
+        <div class="problem__grid">
+          <div class="problem__visual" data-tilt>
+            <div class="problem__visualTop">
+              <div class="problem__tag">
+                <span class="problem__tagDot"></span> “Ручная проверка”
+              </div>
+
+              <div class="problem__miniStats">
+                <div class="miniStat">
+                  <div class="miniStat__k">Скачки цены</div>
+                  <div class="miniStat__v">часто</div>
+                </div>
+                <div class="miniStat">
+                  <div class="miniStat__k">Время</div>
+                  <div class="miniStat__v">уходит</div>
+                </div>
+                <div class="miniStat">
+                  <div class="miniStat__k">Вечер</div>
+                  <div class="miniStat__v">самый важный</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="imgFrame">
+              <img src="./img/Снимок экрана 2026-01-15 155235.png" alt="Скрин: список продавцов / карточка товара"
+                loading="lazy" />
+            </div>
+
+            <div class="problem__float problem__float--1">Вы ниже конкурента</div>
+            <div class="problem__float problem__float--2">Цена “прыгает”</div>
+            <div class="problem__float problem__float--3">Нужно менять вручную</div>
+          </div>
+
+          <!-- Right: cards -->
+          <div class="problem__cards">
+            <article class="card card--split" data-tilt>
+              <div class="card__splitIcon">🏷️</div>
+              <div>
+                <h3 class="h3">Вы не первые</h3>
+                <p class="p">
+                  Покупатель чаще кликает на продавца сверху. Даже небольшая разница по цене влияет на место.
+                </p>
+              </div>
+            </article>
+
+            <article class="card card--split" data-tilt>
+              <div class="card__splitIcon">⏱️</div>
+              <div>
+                <h3 class="h3">Руками долго</h3>
+                <p class="p">
+                  Пока вы проходите товары по одному, конкуренты уже поменяли цену и поднялись выше.
+                </p>
+              </div>
+            </article>
+
+            <article class="card card--split" data-tilt>
+              <div class="card__splitIcon">🌙</div>
+              <div>
+                <h3 class="h3">Вечером и ночью</h3>
+                <p class="p">
+                  Самые активные часы — после работы. А следить вручную каждый вечер неудобно.
+                </p>
+              </div>
+            </article>
+
+            <article class="card card--split card--ghosty" data-tilt>
+              <div class="card__splitIcon">⚠️</div>
+              <div>
+                <h3 class="h3">Главное: вы реагируете поздно</h3>
+                <p class="p">
+                  Рынок меняется быстро. Когда вы меняете цену “потом” — вы уже потеряли место.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section solution" id="solution">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Решение — держать цену “в форме” постоянно</h2>
+          <p class="sub">
+            Вы задаёте минимум и максимум. Дальше цена двигается маленькими шагами — чтобы поднять вас выше и не уйти в
+            минус.
+          </p>
+        </div>
+
+        <div class="solution__grid">
+          <div class="compare" data-tilt>
+            <div class="compare__head">
+              <span class="compare__pill compare__pill--bad">Было</span>
+              <span class="compare__pill compare__pill--good">Стало</span>
+            </div>
+
+            <div class="compare__body">
+              <div class="compare__col compare__col--before">
+                <div class="compare__label">Ручная проверка</div>
+                <div class="imgFrame imgFrame--tight">
+                  <img src="./img/Снимок экрана 2026-01-15 155405.png" alt="До: список продавцов / позиция ниже"
+                    loading="lazy" />
+                </div>
+                <ul class="compare__list">
+                  <li>часто не успеваете</li>
+                  <li>теряете место</li>
+                  <li>устаете от рутины</li>
+                </ul>
+              </div>
+
+              <div class="compare__col compare__col--after">
+                <div class="compare__label">Цена в границах</div>
+                <div class="imgFrame imgFrame--tight">
+                  <img src="./img/Снимок экрана 2026-01-15 155443.png" alt="После: позиция выше / цена под контролем"
+                    loading="lazy" />
+                </div>
+                <ul class="compare__list">
+                  <li>чаще вверху списка</li>
+                  <li>минимум/максимум под контролем</li>
+                  <li>работает 24/7</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="compare__footer">
+              <div class="compare__chip">Шаг цены — небольшой</div>
+              <div class="compare__chip">Ниже минимума — нельзя</div>
+              <div class="compare__chip">Проверка — регулярно</div>
+            </div>
+
+            <div class="compare__beam" aria-hidden="true"></div>
+          </div>
+
+          <!-- Benefits (different style than problem) -->
+          <div class="benefits">
+            <article class="benefit" data-tilt>
+              <div class="benefit__icon">📈</div>
+              <div class="benefit__text">
+                <div class="benefit__title">Чаще в топе</div>
+                <div class="benefit__desc">
+                  Сервис помогает подняться выше в списке продавцов за счёт цены.
+                </div>
+              </div>
+              <div class="benefit__meter" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </article>
+
+            <article class="benefit" data-tilt>
+              <div class="benefit__icon">🛡️</div>
+              <div class="benefit__text">
+                <div class="benefit__title">Без убытков</div>
+                <div class="benefit__desc">
+                  Вы ставите нижнюю границу — ниже неё цена не опускается.
+                </div>
+              </div>
+              <div class="benefit__meter benefit__meter--mint" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </article>
+
+            <article class="benefit" data-tilt>
+              <div class="benefit__icon">🔁</div>
+              <div class="benefit__text">
+                <div class="benefit__title">Работает 24/7</div>
+                <div class="benefit__desc">
+                  Проверки и обновления идут постоянно, даже когда вы не онлайн.
+                </div>
+              </div>
+              <div class="benefit__meter benefit__meter--blue" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </article>
+
+            <article class="benefit benefit--accent" data-tilt>
+              <div class="benefit__icon">🎛️</div>
+              <div class="benefit__text">
+                <div class="benefit__title">Простой контроль</div>
+                <div class="benefit__desc">
+                  Только два числа: минимум и максимум. Дальше всё идёт в этих рамках.
+                </div>
+              </div>
+              <div class="benefit__meter" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section impact" id="impact">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Что меняется в цифрах</h2>
+          <p class="sub">
+            Примерный сценарий “до / после”, чтобы было понятно, за счёт чего растут продажи.
+          </p>
+        </div>
+
+        <div class="impact__grid">
+          <div class="impactCard impactCard--before" data-tilt>
+            <div class="impactCard__top">
+              <div class="impactBadge impactBadge--before">До</div>
+              <div class="impactNote">Ручная проверка</div>
+            </div>
+
+            <div class="impactRows">
+              <div class="impactRow">
+                <div class="impactRow__k">Время вверху списка</div>
+                <div class="impactRow__v">1–2 часа/день</div>
+              </div>
+              <div class="impactRow">
+                <div class="impactRow__k">Позиция в карточке</div>
+                <div class="impactRow__v">2–5 место</div>
+              </div>
+              <div class="impactRow">
+                <div class="impactRow__k">Пропущенные изменения</div>
+                <div class="impactRow__v">часто</div>
+              </div>
+              <div class="impactRow">
+                <div class="impactRow__k">Ручное время</div>
+                <div class="impactRow__v">90–270 мин/день</div>
+              </div>
+            </div>
+
+            <div class="impactFooter">
+              <span class="impactChip impactChip--bad">реакция поздно</span>
+              <span class="impactChip">усталость</span>
+              <span class="impactChip">хаос</span>
+            </div>
+          </div>
+
+          <div class="impactCard impactCard--after" data-tilt>
+            <div class="impactCard__top">
+              <div class="impactBadge impactBadge--after">После</div>
+              <div class="impactNote">Цена в границах</div>
+            </div>
+
+            <div class="impactRows">
+              <div class="impactRow">
+                <div class="impactRow__k">Время вверху списка</div>
+                <div class="impactRow__v">12–16 часов/день</div>
+              </div>
+              <div class="impactRow">
+                <div class="impactRow__k">Позиция в карточке</div>
+                <div class="impactRow__v">1–2 место</div>
+              </div>
+              <div class="impactRow">
+                <div class="impactRow__k">Пропущенные изменения</div>
+                <div class="impactRow__v">редко</div>
+              </div>
+              <div class="impactRow">
+                <div class="impactRow__k">Ручное время</div>
+                <div class="impactRow__v">5–10 мин/день</div>
+              </div>
+            </div>
+
+            <div class="impactFooter">
+              <span class="impactChip impactChip--ok">чаще в топе</span>
+              <span class="impactChip">контроль</span>
+              <span class="impactChip">24/7</span>
+            </div>
+          </div>
+
+          <div class="impactBig" data-tilt>
+            <div class="impactBig__head">
+              <h3 class="impactBig__title">Потенциальный рост</h3>
+              <p class="impactBig__sub">Оценка на примере, чтобы ориентироваться.</p>
+            </div>
+
+            <div class="impactBig__stats">
+              <div class="bigStat">
+                <div class="bigStat__k">Заказы</div>
+                <div class="bigStat__v">+60–80%</div>
+                <div class="bigStat__hint">за счёт места в списке</div>
+              </div>
+              <div class="bigStat">
+                <div class="bigStat__k">Время на цены</div>
+                <div class="bigStat__v">−70–90%</div>
+                <div class="bigStat__hint">меньше рутины</div>
+              </div>
+              <div class="bigStat">
+                <div class="bigStat__k">Вечерние продажи</div>
+                <div class="bigStat__v">выше</div>
+                <div class="bigStat__hint">когда вы не онлайн</div>
+              </div>
+            </div>
+
+            <div class="impactBig__fine">
+              Цифры зависят от категории, конкуренции и ваших границ цены. Это ориентир, не гарантия.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- How -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Как это работает</h2>
+          <p class="sub">Три простых шага без лишних действий.</p>
+        </div>
+
+        <div class="howCards howCards--center">
+          <article class="howCard howCard--center" data-tilt>
+            <div class="howCard__num">1</div>
+            <h3 class="howCard__title">Смотрим цены</h3>
+            <p class="howCard__text">
+              Мы регулярно проверяем ваши товары и цены конкурентов на Kaspi.
+            </p>
+          </article>
+
+          <article class="howCard howCard--center howCard--accent" data-tilt>
+            <div class="howCard__num">2</div>
+            <h3 class="howCard__title">Поднимаем вас выше</h3>
+            <p class="howCard__text">
+              Если вы не первые — цена аккуратно снижается, чтобы поднять вас в списке.
+            </p>
+          </article>
+
+          <article class="howCard howCard--center" data-tilt>
+            <div class="howCard__num">3</div>
+            <h3 class="howCard__title">Возвращаем прибыль</h3>
+            <p class="howCard__text">
+              Когда конкуренты повышают цену, мы тоже поднимаем вашу — в заданных границах.
+            </p>
+          </article>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><b>~3 минуты</b><span>частота проверки</span></div>
+          <div class="fact"><b>Границы</b><span>задаёте вы</span></div>
+          <div class="fact"><b>24/7</b><span>работает всегда</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Больше визуала — меньше слов</h2>
+          <p class="sub">
+            Несколько понятных возможностей, которые делают работу удобнее.
+          </p>
+        </div>
+
+        <div class="cards cards--4">
+          <article class="card" data-tilt>
+            <div class="card__icon">🎯</div>
+            <h3 class="h3">Цель: быть выше</h3>
+            <p class="p">Алгоритм старается поднять вас вверх списка по цене.</p>
+          </article>
+
+          <article class="card" data-tilt>
+            <div class="card__icon">🧱</div>
+            <h3 class="h3">Границы цены</h3>
+            <p class="p">Минимум и максимум — чтобы не “улететь” слишком низко или высоко.</p>
+          </article>
+
+          <article class="card" data-tilt>
+            <div class="card__icon">🕒</div>
+            <h3 class="h3">Работа 24/7</h3>
+            <p class="p">Не нужно сидеть вечером и проверять цены вручную.</p>
+          </article>
+
+          <article class="card" data-tilt>
+            <div class="card__icon">📊</div>
+            <h3 class="h3">Понятная картина</h3>
+            <p class="p">Видно, где вы в списке и что происходит с ценой.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Тарифы</h2>
+          <p class="sub">Простые варианты. Выберите по количеству товаров.</p>
+        </div>
+
+        <div class="pricing__grid">
+          <article class="priceCard" data-tilt>
+            <div class="priceCard__top">
+              <div>
+                <div class="priceCard__name">Start</div>
+                <div class="priceCard__desc">для небольшого магазина</div>
+              </div>
+              <div class="priceCard__price">
+                <span class="priceCard__num">9 990 ₸</span>
+                <span class="priceCard__per">/ мес</span>
+              </div>
+            </div>
+
+            <ul class="priceList">
+              <li>до 50 товаров</li>
+              <li>границы цены (минимум/максимум)</li>
+              <li>работает 24/7</li>
+              <li>поддержка в чате</li>
+            </ul>
+
+            <a class="btn btn--primary btn--lg priceCard__btn" href="#cta">Начать</a>
+            <div class="priceCard__fine">Лучше всего для теста на части ассортимента.</div>
+          </article>
+
+          <article class="priceCard priceCard--popular" data-tilt>
+            <div class="priceCard__top">
+              <div>
+                <div class="priceCard__name">Pro</div>
+                <div class="priceCard__desc">для стабильного роста</div>
+              </div>
+              <div class="priceCard__price">
+                <span class="priceCard__num">19 990 ₸</span>
+                <span class="priceCard__per">/ мес</span>
+              </div>
+            </div>
+
+            <ul class="priceList">
+              <li>до 300 товаров</li>
+              <li>границы цены (минимум/максимум)</li>
+              <li>приоритетная проверка</li>
+              <li>поддержка в чате</li>
+            </ul>
+
+            <a class="btn btn--primary btn--lg priceCard__btn" href="#cta">Начать</a>
+            <div class="priceCard__fine">Оптимально по цене/эффекту.</div>
+          </article>
+
+          <article class="priceCard" data-tilt>
+            <div class="priceCard__top">
+              <div>
+                <div class="priceCard__name">Business</div>
+                <div class="priceCard__desc">для большого ассортимента</div>
+              </div>
+              <div class="priceCard__price">
+                <span class="priceCard__num">39 990 ₸</span>
+                <span class="priceCard__per">/ мес</span>
+              </div>
+            </div>
+
+            <ul class="priceList">
+              <li>до 1000 товаров</li>
+              <li>границы цены (минимум/максимум)</li>
+              <li>расширенные правила</li>
+              <li>приоритетная поддержка</li>
+            </ul>
+
+            <a class="btn btn--primary btn--lg priceCard__btn" href="#cta">Начать</a>
+            <div class="priceCard__fine">Если у вас много товаров и конкурентов.</div>
+          </article>
+        </div>
+
+        <div class="pricing__bottom" data-tilt>
+          <div class="pricing__bottomText">
+            <div class="pricing__bottomTitle">Не подходит ни один вариант?</div>
+            <div class="pricing__bottomSub">Сделаем тариф под ваш объём и категорию.</div>
+          </div>
+          <a class="btn btn--lg" href="#cta">Запросить условия</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Отзывы</h2>
+          <p class="sub">Коротко: что люди отмечают после подключения.</p>
+        </div>
+
+        <div class="testimonials__grid">
+          <article class="quote" data-tilt>
+            <div class="quote__top">
+              <div class="quote__mark">“</div>
+              <div class="quote__meta">
+                <div class="quote__name">Магазин электроники</div>
+                <div class="quote__tag">Kaspi</div>
+              </div>
+            </div>
+            <p class="quote__text">
+              “Раньше цены меняли вручную вечером. Сейчас просто задали границы — и стали чаще появляться первыми.”
+            </p>
+            <div class="quote__bottom">
+              <span class="quote__pill">меньше рутины</span>
+              <span class="quote__pill">больше заказов</span>
+            </div>
+          </article>
+
+          <article class="quote quote--accent" data-tilt>
+            <div class="quote__top">
+              <div class="quote__mark">“</div>
+              <div class="quote__meta">
+                <div class="quote__name">Товары для дома</div>
+                <div class="quote__tag">Kaspi</div>
+              </div>
+            </div>
+            <p class="quote__text">
+              “Главное — не уходим ниже минимума. Это даёт спокойствие, а место в списке реально держится дольше.”
+            </p>
+            <div class="quote__bottom">
+              <span class="quote__pill">контроль</span>
+              <span class="quote__pill">вверху списка</span>
+            </div>
+          </article>
+
+          <article class="quote" data-tilt>
+            <div class="quote__top">
+              <div class="quote__mark">“</div>
+              <div class="quote__meta">
+                <div class="quote__name">Магазин аксессуаров</div>
+                <div class="quote__tag">Kaspi</div>
+              </div>
+            </div>
+            <p class="quote__text">
+              “Подключили на часть товаров — стало проще. Сервис работает сам, а мы смотрим результат по продажам.”
+            </p>
+            <div class="quote__bottom">
+              <span class="quote__pill">быстрый старт</span>
+              <span class="quote__pill">понятно</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonials__strip" data-tilt>
+          <div class="strip__left">
+            <div class="strip__title">Хотите так же?</div>
+            <div class="strip__sub">Покажем на ваших товарах, как будет выглядеть “до/после”.</div>
+          </div>
+          <a class="btn btn--primary btn--lg" href="#cta">Попробовать бесплатно</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="section" id="cta">
+      <div class="container">
+        <div class="cta" data-tilt>
+          <div class="cta__text">
+            <h2 class="h2">Попробуйте на своих товарах</h2>
+            <p class="sub">
+              Вы задаёте границы цены и смотрите результат. Обычно старт занимает считанные минуты.
+            </p>
+          </div>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--lg" href="#">Попробовать бесплатно</a>
+            <a class="btn btn--lg" href="#faq">Есть вопросы</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">FAQ</h2>
+          <p class="sub">Коротко и по делу.</p>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item" data-tilt>
+            <summary class="faq__q">
+              Это безопасно для магазина?
+              <span class="faq__chev" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="faq__a">
+              Логика простая: сервис меняет цену в заданных вами границах. Контроль остаётся у вас.
+            </div>
+          </details>
+
+          <details class="faq__item" data-tilt>
+            <summary class="faq__q">
+              Не уйду ли я в минус?
+              <span class="faq__chev" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="faq__a">
+              Если выставлен минимум — ниже него цена не опускается.
+            </div>
+          </details>
+
+          <details class="faq__item" data-tilt>
+            <summary class="faq__q">
+              Как часто обновляются цены?
+              <span class="faq__chev" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="faq__a">
+              Проверка идёт регулярно — в среднем примерно раз в 3 минуты.
+            </div>
+          </details>
+
+          <details class="faq__item" data-tilt>
+            <summary class="faq__q">
+              Подойдёт, если товаров много?
+              <span class="faq__chev" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="faq__a">
+              Да. Смысл как раз в том, чтобы не следить вручную за десятками и сотнями товаров.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--small">
+            <span class="brand__mark" aria-hidden="true">PT</span>
+            <span class="brand__name">PriceTop</span>
+          </div>
+          <div class="footer__copy">© <span data-year></span> PriceTop</div>
+        </div>
+
+        <div class="footer__right">
+          <a class="footer__link" href="#problem">Проблема</a>
+          <a class="footer__link" href="#how">Как работает</a>
+          <a class="footer__link" href="#cta">Попробовать</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+    const burger = document.querySelector("[data-burger]");
+    const mobile = document.querySelector("[data-mobile]");
+    const toggleMobile = () => {
+      const open = mobile.classList.toggle("mobile--open");
+      burger.classList.toggle("burger--open", open);
+      document.body.classList.toggle("no-scroll", open);
+    };
+    burger?.addEventListener("click", toggleMobile);
+    mobile?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => {
+      if (mobile.classList.contains("mobile--open")) toggleMobile();
+    }));
+
+    const reveal = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("reveal--in");
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll("[data-tilt], .section__head, .facts, .cta").forEach((el) => {
+      el.classList.add("reveal");
+      reveal.observe(el);
+    });
+
+    const canHover = matchMedia("(hover:hover) and (pointer:fine)").matches;
+    if (canHover) {
+      document.querySelectorAll("[data-tilt]").forEach((card) => {
+        let raf = null;
+        const reset = () => {
+          card.style.transform = "";
+          card.style.setProperty("--mx", "0px");
+          card.style.setProperty("--my", "0px");
+        };
+
+        const onMove = (ev) => {
+          const r = card.getBoundingClientRect();
+          const px = (ev.clientX - r.left) / r.width;
+          const py = (ev.clientY - r.top) / r.height;
+          const rx = (py - 0.5) * -8;
+          const ry = (px - 0.5) * 10;
+          const mx = (px - 0.5) * 18;
+          const my = (py - 0.5) * 18;
+
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translate3d(${mx}px, ${my}px, 0)`;
+            card.style.setProperty("--mx", `${mx}px`);
+            card.style.setProperty("--my", `${my}px`);
+          });
+        };
+
+        card.addEventListener("mousemove", onMove);
+        card.addEventListener("mouseleave", reset);
+      });
+    }
+
+    const par = document.querySelector("[data-parallax]");
+    if (canHover && par) {
+      window.addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 16;
+        const y = (e.clientY / window.innerHeight - 0.5) * 12;
+        par.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+    }
+  </script>
+</body>
+
+</html>
