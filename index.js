@@ -1,5 +1,18 @@
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+function clearHashAndScrollTop() {
+  try {
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  } catch (err) {
+  }
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener('load', clearHashAndScrollTop);
+window.addEventListener('pageshow', (e) => { if (e.persisted) clearHashAndScrollTop(); });
+
 const burger = document.querySelector("[data-burger]");
 const mobile = document.querySelector("[data-mobile]");
 const toggleMobile = () => {
@@ -24,47 +37,7 @@ document.querySelectorAll("[data-tilt], .section__head, .facts, .cta").forEach((
   el.classList.add("reveal");
   reveal.observe(el);
 });
-
-const canHover = matchMedia("(hover:hover) and (pointer:fine)").matches;
-if (canHover) {
-  document.querySelectorAll("[data-tilt]").forEach((card) => {
-    let raf = null;
-    const reset = () => {
-      card.style.transform = "";
-      card.style.setProperty("--mx", "0px");
-      card.style.setProperty("--my", "0px");
-    };
-
-    const onMove = (ev) => {
-      const r = card.getBoundingClientRect();
-      const px = (ev.clientX - r.left) / r.width;
-      const py = (ev.clientY - r.top) / r.height;
-      const rx = (py - 0.5) * -8;
-      const ry = (px - 0.5) * 10;
-      const mx = (px - 0.5) * 18;
-      const my = (py - 0.5) * 18;
-
-      if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translate3d(${mx}px, ${my}px, 0)`;
-        card.style.setProperty("--mx", `${mx}px`);
-        card.style.setProperty("--my", `${my}px`);
-      });
-    };
-
-    card.addEventListener("mousemove", onMove);
-    card.addEventListener("mouseleave", reset);
-  });
-}
-
-const par = document.querySelector("[data-parallax]");
-if (canHover && par) {
-  window.addEventListener("mousemove", (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 16;
-    const y = (e.clientY / window.innerHeight - 0.5) * 12;
-    par.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-  });
-}
+// Removed JS-driven tilt/parallax. Subtle hover scale is handled in CSS now.
 
 (function () {
   const viewport = document.querySelector("[data-slider]");
@@ -130,6 +103,5 @@ if (canHover && par) {
 
   requestAnimationFrame(() => {
     updateActive();
-    scrollToIndex(0);
   });
 })();
